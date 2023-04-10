@@ -120,6 +120,13 @@ if show_q15:
     ax.set_ylabel("Subject")
     st.pyplot(fig)
     
+show_q16 = st.checkbox("Show correlation between number of subscribers and price?")
+if show_q16:
+    fig, ax = plt.subplots()
+    sns.scatterplot(x='num_subscribers', y='price', data=data, ax=ax)
+    ax.set_xlabel("Number of subscribers")
+    ax.set_ylabel("Price")
+    st.pyplot(fig)
 
 
 
