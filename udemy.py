@@ -123,7 +123,7 @@ if show_q15:
 show_q16 = st.checkbox("Show correlation between num_reviews and price?")
 if show_q16:
     fig, ax = plt.subplots()
-    sns.scatterplot(x='num_reviews', y='price',  ax=ax)
+    sns.scatterplot(x='num_reviews', y='price',data=data,  ax=ax)
     ax.set_xlabel("Num_reviews")
     ax.set_ylabel("Price")
     st.pyplot(fig)
